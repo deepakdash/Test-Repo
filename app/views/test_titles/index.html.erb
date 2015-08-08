@@ -1,0 +1,52 @@
+<script>
+$(function() {    
+    $('#test_list').dataTable();
+});
+</script>
+
+
+<h1>List Of Test Titles <%= link_to 'New Test title', new_test_title_path(:dep_id=>params[:dep_id]),:style=>"font-size:14px;float:right",:class=>"btn btn-info btn-cons"%></h1>
+<hr>
+<div>
+Department Name : <b><%=@dpt.name%></b>
+<br>
+Department Code : <b><%=@dpt.department_code%></b>
+</div>
+<br>
+<table id="test_list" class="table table-striped table-bordered">
+ <thead>  
+  <tr>
+    <th>Test Title</th>
+    <th>Price</th>
+    <th>Tat(Turn Around Time)</th>
+    
+    <th>Actions</th>
+    
+  </tr>
+</thead> 
+<tbody>
+  <%if @test_titles.present?%>  
+<% @test_titles.each do |test_title| %>
+  <tr>
+    <td><%= test_title.title %></td>
+    <td><%= test_title.price %></td>
+    <td><%= test_title.tat %></td>
+    
+    
+    <td> <a href="/test_names?test_title_id=<%=test_title.id%>"><button>Test Name</button></a> <%= link_to 'Show', test_title %>  <%= link_to 'Edit', edit_test_title_path(test_title) %>  <%= link_to 'Destroy', test_title, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    
+  </tr>
+<% end %>
+<%else%>
+ <tr>
+    <td colspan="6">
+        No Tests Found
+    </td> 
+  </tr>  
+<%end%>
+</tbody>
+</table>
+
+<br />
+
+

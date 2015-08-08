@@ -1,0 +1,2 @@
+module EntitleDiscountDetailsHelper
+end

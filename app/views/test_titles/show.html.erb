@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @test_title.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @test_title.description %>
+</p>
+
+<p>
+  <b>Process:</b>
+  <%= @test_title.process %>
+</p>
+
+<p>
+  <b>Price:</b>
+  <%= @test_title.price %>
+</p>
+
+<p>
+  <b>Tat:</b>
+  <%= @test_title.tat %>
+</p>
+
+<p>
+  <b>Remarks:</b>
+  <%= @test_title.remarks %>
+</p>
+
+<p>
+  <b>Restriction:</b>
+  <%= @test_title.restriction %>
+</p>
+
+<p>
+  <b>Social note:</b>
+  <%= @test_title.social_note %>
+</p>
+
+<p>
+  <b>Department:</b>
+  <%= @test_title.department_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_test_title_path(@test_title) %> |
+<%= link_to 'Back', test_titles_path %>

@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  address: MyText
+  contact_no: MyString
+  tax_pan: MyString
+  specialize: MyString
+  contact_person: MyString
+  dept: MyString
+  designation: MyString
+  dob: 
+  rate: 1
+  ref_code: MyString
+  entitle_incentives: 1
+
+two:
+  name: MyString
+  address: MyText
+  contact_no: MyString
+  tax_pan: MyString
+  specialize: MyString
+  contact_person: MyString
+  dept: MyString
+  designation: MyString
+  dob: 
+  rate: 1
+  ref_code: MyString
+  entitle_incentives: 1

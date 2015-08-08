@@ -1,0 +1,50 @@
+<script>
+$(function() {    
+    $('#test_name').dataTable();
+});
+</script>
+
+<h1>Listing Of Test Names <%= link_to 'New Test name', new_test_name_path(:test_title_id=>params[:test_title_id]),:style=>"font-size:14px;float:right"  %></h1>
+
+<table id="test_name" class="table table-striped table-bordered">
+ <thead>  
+  <tr>
+    <th>Name</th>
+    <th>Element</th>
+    <th>Bio ref</th>
+    <th>Unit mea</th>
+    <th>Mth tec</th>
+    <th>Result</th>
+    <th>Test title</th>
+    <th>Actions</th>
+    
+  </tr>
+</thead>
+<tbody> 
+ <%if @test_title.test_names.present?%>   
+    <% @test_title.test_names.each do |test_name| %>
+      <tr>
+        <td><%= test_name.name %></td>
+        <td><%= test_name.element %></td>
+        <td><%= test_name.bio_ref %></td>
+        <td><%= test_name.unit_mea %></td>
+        <td><%= test_name.mth_tec %></td>
+        <td><%= test_name.result %></td>
+        <td><%= test_name.test_title_id %></td>
+        <td><%= link_to 'Show', test_name %>  <%= link_to 'Edit', edit_test_name_path(test_name) %>  <%= link_to 'Destroy', test_name, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        
+      </tr>
+    <% end %>
+ <%else%>
+  <tr>
+     <td colspan="8">
+        No Test Names Found!.
+     </td>
+  </tr>
+ <%end%>
+</tbody>
+</table>
+
+<br />
+
+

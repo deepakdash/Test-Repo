@@ -1,0 +1,2 @@
+module EntitleIncentiveDetailsHelper
+end

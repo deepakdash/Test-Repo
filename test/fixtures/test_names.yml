@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyText
+  element: MyText
+  bio_ref: MyText
+  unit_mea: MyText
+  mth_tec: MyText
+  result: MyText
+  test_title_id: 1
+
+two:
+  name: MyText
+  element: MyText
+  bio_ref: MyText
+  unit_mea: MyText
+  mth_tec: MyText
+  result: MyText
+  test_title_id: 1

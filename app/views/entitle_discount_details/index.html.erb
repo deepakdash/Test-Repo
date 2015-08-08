@@ -1,0 +1,45 @@
+<h1>Listing entitle_discount_details</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Address</th>
+    <th>Contact no</th>
+    <th>Tax pan</th>
+    <th>Specialize</th>
+    <th>Contact person</th>
+    <th>Dept</th>
+    <th>Designation</th>
+    <th>Dob</th>
+    <th>Rate</th>
+    <th>Ref code</th>
+    <th>Entitle discount</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @entitle_discount_details.each do |entitle_discount_detail| %>
+  <tr>
+    <td><%= entitle_discount_detail.name %></td>
+    <td><%= entitle_discount_detail.address %></td>
+    <td><%= entitle_discount_detail.contact_no %></td>
+    <td><%= entitle_discount_detail.tax_pan %></td>
+    <td><%= entitle_discount_detail.specialize %></td>
+    <td><%= entitle_discount_detail.contact_person %></td>
+    <td><%= entitle_discount_detail.dept %></td>
+    <td><%= entitle_discount_detail.designation %></td>
+    <td><%= entitle_discount_detail.dob %></td>
+    <td><%= entitle_discount_detail.rate %></td>
+    <td><%= entitle_discount_detail.ref_code %></td>
+    <td><%= entitle_discount_detail.entitle_discount_id %></td>
+    <td><%= link_to 'Show', entitle_discount_detail %></td>
+    <td><%= link_to 'Edit', edit_entitle_discount_detail_path(entitle_discount_detail) %></td>
+    <td><%= link_to 'Destroy', entitle_discount_detail, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Entitle discount detail', new_entitle_discount_detail_path %>

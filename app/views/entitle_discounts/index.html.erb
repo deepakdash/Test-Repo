@@ -1,0 +1,25 @@
+<h1>Listing entitle_discounts</h1>
+
+<table>
+  <tr>
+    <th>Ref type</th>
+    <th>Ref code</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @entitle_discounts.each do |entitle_discount| %>
+  <tr>
+    <td><%= entitle_discount.ref_type %></td>
+    <td><%= entitle_discount.ref_code %></td>
+    <td><%= link_to 'Show', entitle_discount %></td>
+    <td><%= link_to 'Edit', edit_entitle_discount_path(entitle_discount) %></td>
+    <td><%= link_to 'Destroy', entitle_discount, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Entitle discount', new_entitle_discount_path %>

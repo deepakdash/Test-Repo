@@ -1,0 +1,45 @@
+<h1>Listing entitle_incentive_details</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Address</th>
+    <th>Contact no</th>
+    <th>Tax pan</th>
+    <th>Specialize</th>
+    <th>Contact person</th>
+    <th>Dept</th>
+    <th>Designation</th>
+    <th>Dob</th>
+    <th>Rate</th>
+    <th>Ref code</th>
+    <th>Entitle incentives</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @entitle_incentive_details.each do |entitle_incentive_detail| %>
+  <tr>
+    <td><%= entitle_incentive_detail.name %></td>
+    <td><%= entitle_incentive_detail.address %></td>
+    <td><%= entitle_incentive_detail.contact_no %></td>
+    <td><%= entitle_incentive_detail.tax_pan %></td>
+    <td><%= entitle_incentive_detail.specialize %></td>
+    <td><%= entitle_incentive_detail.contact_person %></td>
+    <td><%= entitle_incentive_detail.dept %></td>
+    <td><%= entitle_incentive_detail.designation %></td>
+    <td><%= entitle_incentive_detail.dob %></td>
+    <td><%= entitle_incentive_detail.rate %></td>
+    <td><%= entitle_incentive_detail.ref_code %></td>
+    <td><%= entitle_incentive_detail.entitle_incentive_id %></td>
+    <td><%= link_to 'Show', entitle_incentive_detail %></td>
+    <td><%= link_to 'Edit', edit_entitle_incentive_detail_path(entitle_incentive_detail) %></td>
+    <td><%= link_to 'Destroy', entitle_incentive_detail, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Entitle incentive detail', new_entitle_incentive_detail_path %>

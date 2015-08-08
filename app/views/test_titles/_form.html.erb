@@ -1,0 +1,53 @@
+<%= form_for(@test_title) do |f| %>
+  <% if @test_title.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@test_title.errors.count, "error") %> prohibited this test_title from being saved:</h2>
+
+      <ul>
+      <% @test_title.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :process %><br />
+    <%= f.text_area :process %>
+  </div>
+  <div class="field">
+    <%= f.label :price %><br />
+    <%= f.number_field :price %>
+  </div>
+  <div class="field">
+    <%= f.label :tat %><br />
+    <%= f.text_field :tat %>
+  </div>
+  <div class="field">
+    <%= f.label :remarks %><br />
+    <%= f.text_area :remarks %>
+  </div>
+  <div class="field">
+    <%= f.label :restriction %><br />
+    <%= f.text_area :restriction %>
+  </div>
+  <div class="field">
+    <%= f.label :social_note %><br />
+    <%= f.text_area :social_note %>
+  </div>
+  <div class="field">
+    
+    <%= f.hidden_field :department_id,:value => "#{params[:dep_id]}" %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

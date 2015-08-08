@@ -1,0 +1,69 @@
+<script type="text/javascript">
+ var cnt = 1;
+ function append_more_test(obj)
+ {
+  alert("sss")
+  if(cnt < 3){
+    $("#new_test").append("<table><tr><td>Test Name<input type='text' name='name["+cnt+"]' id='name["+cnt+"]'></td><td>Test Element<textarea name='element["+cnt+"]' id='element["+cnt+"]'></textarea></td><td>Biological Referencec<textarea name='bio_ref["+cnt+"]' id='bio_ref["+cnt+"]'></textarea></td><td>Unit Of Meas.<textarea name='unit["+cnt+"]' id='unit["+cnt+"]'></textarea></td><td>Method<textarea name='mth["+cnt+"]' id='mth["+cnt+"]'></textarea></td><td>Result<textarea name='result["+cnt+"]' id='result["+cnt+"]'></textarea></tr></table> ").fadeIn(300);
+    cnt++;
+    }
+ }
+</script>
+<%= form_for(@test_name) do |f| %>
+  <% if @test_name.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@test_name.errors.count, "error") %> prohibited this test_name from being saved:</h2>
+
+      <ul>
+      <% @test_name.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<div id="new_test">
+  <table>
+    <tr>
+      <td>
+        Test Name
+        <%#= f.text_field :name %>
+        <input type="text" name="name[0]" id="name[0]">
+      </td>
+      <td>
+        Test Element
+        <%#= f.text_area :element,:style=>"width:246px;height:74px" %>
+        <textarea name="element[0]" id="element[0]"></textarea>
+      </td>
+      <td>
+        Biological Referencec
+        <%#= f.text_area :bio_ref,:style=>"width:246px;height:74px" %>
+        <textarea name="bio_ref[0]" id="bio_ref[0]"></textarea>
+      </td>
+      <td>
+        Unit Of Meas.
+        <%#= f.text_area :unit_mea,:style=>"width:246px;height:74px" %>
+        <textarea name="unit[0]" id="unit[0]"></textarea>
+      </td>
+      <td>
+        Method
+        <%#= f.text_area :mth_tec,:style=>"width:246px;height:74px" %>
+        <textarea name="mth[0]" id="mth[0]"></textarea>
+      </td>
+      <td>
+        Result
+
+        <%#= f.text_area :result,:style=>"width:246px;height:74px" %>
+        <textarea name="result[0]" id="result[0]"></textarea>
+
+    </tr>
+  </table> 
+
+  </div>
+  <div class="field">
+    
+    <%= f.hidden_field :test_title_id,:value =>"#{params[:test_title_id]}" %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

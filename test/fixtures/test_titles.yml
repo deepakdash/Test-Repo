@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  title: MyString
+  description: MyText
+  process: MyText
+  price: 1
+  tat: 
+  remarks: MyText
+  restriction: MyText
+  social_note: MyText
+  department_id: 1
+
+two:
+  title: MyString
+  description: MyText
+  process: MyText
+  price: 1
+  tat: 
+  remarks: MyText
+  restriction: MyText
+  social_note: MyText
+  department_id: 1

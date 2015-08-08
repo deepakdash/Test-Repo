@@ -1,0 +1,35 @@
+<%= form_for(@department) do |f| %>
+  <% if @department.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@department.errors.count, "error") %> prohibited this department from being saved:</h2>
+
+      <ul>
+      <% @department.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :name %><br />
+    <%= f.text_field :name,:class=>"form-control input-lg",:style=> "width:35%",:placeholder=>"Department Name",:required=>true %>
+  </div>
+  <div class="form-group">
+    <%= f.label :dep_type %><br />
+    
+    <select name="department[dep_type]" class="form-control" style= "width:35%;height:55px;padding-top:17px;",required="true">
+     <option value="">Select Type</option>
+     <option value="Lab">Laboratory</option>
+     <option value="ImO">Imaging & Others</option>
+    </select>
+  </div>
+  
+  <div class="actions">
+    <%if params[:action] == "edit"%>
+      <%= f.submit "Update Department",  :class=>"btn btn-primary btn-cons"%>
+    <%else%>
+      <%= f.submit "Create Department",  :class=>"btn btn-primary btn-cons"%>
+    <%end%>  
+  </div>
+<% end %>

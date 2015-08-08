@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @test_name.name %>
+</p>
+
+<p>
+  <b>Element:</b>
+  <%= @test_name.element %>
+</p>
+
+<p>
+  <b>Bio ref:</b>
+  <%= @test_name.bio_ref %>
+</p>
+
+<p>
+  <b>Unit mea:</b>
+  <%= @test_name.unit_mea %>
+</p>
+
+<p>
+  <b>Mth tec:</b>
+  <%= @test_name.mth_tec %>
+</p>
+
+<p>
+  <b>Result:</b>
+  <%= @test_name.result %>
+</p>
+
+<p>
+  <b>Test title:</b>
+  <%= @test_name.test_title_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_test_name_path(@test_name) %> |
+<%= link_to 'Back', test_names_path %>
